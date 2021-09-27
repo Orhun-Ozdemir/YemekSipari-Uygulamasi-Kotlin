@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_activity"
+    app:startDestination="@id/anaSayfaFragment">
+
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.example.yemeksiparis.fragment.AnaSayfaFragment"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa" >
+        <action
+            android:id="@+id/anaSayfaFragment_To_yemekDetayFragment"
+            app:destination="@id/yemekDetayFragment" />
+        <action
+            android:id="@+id/anaSayfaFragment_To_yemekSepetiFragment"
+            app:destination="@id/yemekSepetiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yemekDetayFragment"
+        android:name="com.example.yemeksiparis.fragment.YemekDetayFragment"
+        android:label="fragment_yemek_detay"
+        tools:layout="@layout/fragment_yemek_detay" />
+    <fragment
+        android:id="@+id/yemekSepetiFragment"
+        android:name="com.example.yemeksiparis.fragment.YemekSepetiFragment"
+        android:label="fragment_yemek_sepeti"
+        tools:layout="@layout/fragment_yemek_sepeti" >
+        <action
+            android:id="@+id/yemekSepetiFragment_To_yemekDetayFragment"
+            app:destination="@id/yemekDetayFragment" />
+    </fragment>
+</navigation>
