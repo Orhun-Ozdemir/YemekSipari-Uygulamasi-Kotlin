@@ -3,9 +3,11 @@ package com.example.yemeksiparis.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.yemeksiparis.databinding.YemekCardItemBinding
 import com.example.yemeksiparis.entity.Yemek
+import com.example.yemeksiparis.fragment.AnaSayfaFragmentDirections
 
 class YemekCardAdapter(var mContext: Context, var dataSet:List<Yemek>):RecyclerView.Adapter<YemekCardAdapter.YemekCardViewHolder>()
 {
@@ -13,9 +15,13 @@ class YemekCardAdapter(var mContext: Context, var dataSet:List<Yemek>):RecyclerV
     inner class YemekCardViewHolder(tasarim:YemekCardItemBinding):RecyclerView.ViewHolder(tasarim.root)
     {
 
-      val tasarim=tasarim
+      var tasarim:YemekCardItemBinding
+
+     init {
 
 
+         this.tasarim=tasarim
+     }
 
 
 
@@ -30,7 +36,19 @@ class YemekCardAdapter(var mContext: Context, var dataSet:List<Yemek>):RecyclerV
 
     override fun onBindViewHolder(holder: YemekCardViewHolder, position: Int) {
 
-       holder.tasarim.textViewYemekAdi.text=dataSet[position].yemek_adi
+        val yemek:Yemek=dataSet[position]
+        val card=holder.tasarim.yemekCardView
+         holder.tasarim.textViewYemekAdi.text=yemek.yemek_adi
+
+        card.setOnClickListener {
+
+            val direction= AnaSayfaFragmentDirections.anaSayfaFragmentToYemekDetayFragment()
+            Navigation.findNavController(it).navigate(direction)
+
+
+        }
+
+
 
     }
 
