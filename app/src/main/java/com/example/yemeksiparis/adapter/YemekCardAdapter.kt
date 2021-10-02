@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.yemeksiparis.databinding.YemekCardItemBinding
 import com.example.yemeksiparis.entity.Yemek
 import com.example.yemeksiparis.fragment.AnaSayfaFragmentDirections
+import com.squareup.picasso.Picasso
 
 class YemekCardAdapter(var mContext: Context, var dataSet:List<Yemek>):RecyclerView.Adapter<YemekCardAdapter.YemekCardViewHolder>()
 {
@@ -37,12 +38,16 @@ class YemekCardAdapter(var mContext: Context, var dataSet:List<Yemek>):RecyclerV
     override fun onBindViewHolder(holder: YemekCardViewHolder, position: Int) {
 
         val yemek:Yemek=dataSet[position]
+        holder.tasarim.yemek=yemek
         val card=holder.tasarim.yemekCardView
-         holder.tasarim.textViewYemekAdi.text=yemek.yemek_adi
+
+
+        val url="http://kasimadalan.pe.hu/yemekler/resimler/${yemek.yemek_resim_adi}"
+        Picasso.get().load(url).into(holder.tasarim.imageViewYemekResim)
 
         card.setOnClickListener {
 
-            val direction= AnaSayfaFragmentDirections.anaSayfaFragmentToYemekDetayFragment()
+            val direction= AnaSayfaFragmentDirections.anaSayfaFragmentToYemekDetayFragment(yemek)
             Navigation.findNavController(it).navigate(direction)
 
 

@@ -21,7 +21,11 @@
         android:id="@+id/yemekDetayFragment"
         android:name="com.example.yemeksiparis.fragment.YemekDetayFragment"
         android:label="fragment_yemek_detay"
-        tools:layout="@layout/fragment_yemek_detay" />
+        tools:layout="@layout/fragment_yemek_detay" >
+        <argument
+            android:name="yemekNesnesi"
+            app:argType="com.example.yemeksiparis.entity.Yemek" />
+    </fragment>
     <fragment
         android:id="@+id/yemekSepetiFragment"
         android:name="com.example.yemeksiparis.fragment.YemekSepetiFragment"

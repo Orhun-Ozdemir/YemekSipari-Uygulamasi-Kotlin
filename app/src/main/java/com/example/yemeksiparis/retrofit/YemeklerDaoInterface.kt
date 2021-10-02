@@ -7,7 +7,7 @@ import retrofit2.http.GET
 interface YemeklerDaoInterface
 {
 
-    @GET("/tumYemekleriGetir.php")
+    @GET("tumYemekleriGetir.php")
     fun tumYemekleriGetir(): Call<YemeklerResponse>
 
 
