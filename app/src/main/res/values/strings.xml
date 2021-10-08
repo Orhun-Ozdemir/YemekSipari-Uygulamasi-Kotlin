@@ -2,4 +2,19 @@
     <string name="app_name">YemekSiparis</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="yemekDetayTitle"> Yemek Detay</string>
+    <string name="ana_sayfa_title">  Ana Sayfa</string>
+    <string name="yemek_sepet_title"> Yemek Sepeti</string>
+    <string name="sepete_ekle">Sepete Ekle</string>
+    <string name="para_birimi"> ₺ </string>
+    <string name="ürünlerin_fiyati"> Ürünlerin Fiyatı</string>
+    <string name="kuriye_hizmeti">Kuriye Hizmeti</string>
+    <string name="toplam">Toplam</string>
+    <string name="sepeti_bosalt">Sepeti Bosalt</string>
+    <string name="siparis">Siparis</string>
+    <string name="tum_sepeti_bosalt">Tum Sepeti Bosalt</string>
+    <string name="evet">Evet</string>
+    <string name="hayır">Hayır</string>
+    <string name="fiyat">Fiyat</string>
+    <string name="adet">Adet</string>
 </resources>

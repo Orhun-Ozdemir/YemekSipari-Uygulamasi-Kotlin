@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">YemekSiparis</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="yemekDetayTitle">Food Detail</string>
+    <string name="ana_sayfa_title">Home Page</string>
+    <string name="yemek_sepet_title"> Food Card</string>
+    <string name="sepete_ekle">Add Card</string>
+    <string name="para_birimi"> $ </string>
+    <string name="ürünlerin_fiyati"> Item Total</string>
+    <string name="kuriye_hizmeti">Delivery Services</string>
+    <string name="toplam">Total</string>
+    <string name="sepeti_bosalt">Discard All</string>
+    <string name="siparis">Checkout</string>
+    <string name="tum_sepeti_bosalt">Are you sure you want to empty the entire basket?</string>
+    <string name="evet">Yes</string>
+    <string name="hayır">No</string>
+    <string name="fiyat">Price</string>
+    <string name="adet">Count</string>
+</resources>

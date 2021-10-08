@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import com.example.yemeksiparis.R
 import com.example.yemeksiparis.adapter.YemekCardAdapter
 import com.example.yemeksiparis.databinding.FragmentAnaSayfaBinding
@@ -25,13 +26,17 @@ class AnaSayfaFragment : Fragment() {
 
         // tasarim değişkenine  AnaSayfa Fragmnet için kullanılan DataBinding sınıfından  layout inflator kullanılarak  deger ataması yapılıyor
        tasarim= FragmentAnaSayfaBinding.inflate(inflater)
-       tasarim.anaSayfaToolbarTitle="Ana Sayfa"
+
         viewModel.yemekListesi.observe(viewLifecycleOwner,{yemekListesi->
             adapter= YemekCardAdapter(requireContext(),yemekListesi)
             tasarim.yemekCardAdapter=adapter
         })
 
+        tasarim.floatingActionButton.setOnClickListener {
 
+
+            Navigation.findNavController(it).navigate(AnaSayfaFragmentDirections.anaSayfaFragmentToYemekSepetiFragment())
+        }
 
 
 

@@ -20,31 +20,28 @@
 
             android:id="@+id/yemekCardView"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            app:cardBackgroundColor="#FFFEFE"
-            app:cardCornerRadius="30dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_background_color"
+            app:cardCornerRadius="10dp"
             app:cardElevation="5dp"
-            app:cardUseCompatPadding="true"
-
-
-            >
+            app:cardUseCompatPadding="true">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/imageViewYemekResim"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
 
-                    app:layout_constraintEnd_toEndOf="parent"
-
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="1dp"
+                    app:layout_constraintBottom_toTopOf="@+id/button2"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewYemekAdi"
+                    app:layout_constraintStart_toStartOf="@+id/textViewYemekAdi"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewYemekAdi"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <TextView
@@ -52,36 +49,39 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
                     android:text="@{yemek.yemek_adi}"
-                    android:textColor="#FE0A16"
+                    android:textColor="@color/yemek_isim_color"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_bias="0.519"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageViewYemekResim"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:text="Izgara Tavuk" />
 
                 <Button
 
+                    android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@color/main_color"
                     android:padding="5dp"
                     android:paddingLeft="5dp"
                     android:paddingTop="5dp"
                     android:paddingRight="5dp"
                     android:paddingBottom="5dp"
-                    android:text='@{Integer.valueOf(yemek.yemek_fiyat).toString()+" ₺"}'
+                    android:text='@{Integer.valueOf(yemek.yemek_fiyat).toString()+" "+@string/para_birimi}'
                     android:textStyle="bold"
-                    app:cornerRadius="30dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:cornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/textViewYemekAdi"
-                    tools:text="33  ₺" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewYemekResim"
+                    tools:text="33 ₺" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
