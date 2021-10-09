@@ -62,10 +62,10 @@
                     android:id="@+id/textViewSepetFiyat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="191dp"
                     android:layout_marginTop="12dp"
-                    android:layout_marginEnd="53dp"
                     android:text='@{@string/fiyat+":"+Integer.valueOf(sepetYemek.yemek_fiyat).toString()}'
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewSepetResim"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
