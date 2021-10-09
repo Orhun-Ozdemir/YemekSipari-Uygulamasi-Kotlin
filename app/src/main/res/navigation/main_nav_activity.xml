@@ -27,17 +27,15 @@
             app:argType="com.example.yemeksiparis.entity.Yemek" />
         <action
             android:id="@+id/action_yemekDetayFragment_to_yemekSepetiFragment"
-            app:destination="@id/yemekSepetiFragment" />
+            app:destination="@id/yemekSepetiFragment"
+            app:popUpTo="@id/yemekDetayFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/yemekSepetiFragment"
         android:name="com.example.yemeksiparis.fragment.YemekSepetiFragment"
         android:label="fragment_yemek_sepeti"
-        tools:layout="@layout/fragment_yemek_sepeti" >
-        <action
-            android:id="@+id/yemekSepetiFragment_To_yemekDetayFragment"
-            app:destination="@id/yemekDetayFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_yemek_sepeti" />
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.yemeksiparis.fragment.SplashFragment"

@@ -28,7 +28,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="50dp"
-            android:layout_marginBottom="225dp"
+            android:layout_marginBottom="220dp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,17 +36,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:spanCount="2" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="@string/yemekDetayTitle"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
 
         <Button
             android:id="@+id/button"
@@ -68,8 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="50dp"
+            android:backgroundTint="@color/main_color"
             android:text="@string/ürünlerin_fiyati"
-            android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/textView3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/recycleViewYemekSepeti" />
@@ -81,7 +71,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="12dp"
             android:text="@string/kuriye_hizmeti"
-            android:textColor="@color/black"
+
             app:layout_constraintBottom_toTopOf="@+id/textView6"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -93,7 +83,7 @@
             android:layout_marginTop="50dp"
             android:layout_marginEnd="30dp"
             android:text="@{sepetFiyat}"
-            android:textColor="@color/black"
+            android:textColor="@color/main_color"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/recycleViewYemekSepeti" />
@@ -118,8 +108,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="30dp"
-            android:text="20 TL"
-            android:textColor="@color/black"
+            android:text="20"
+            android:textColor="@color/main_color"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewSepetFiyat" />
@@ -131,7 +121,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="28dp"
             android:text="TextView"
-            android:textColor="@color/black"
+            android:textColor="@color/main_color"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -167,6 +157,32 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
             app:layout_constraintEnd_toStartOf="@+id/imageButton2"
             app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="3dp"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintBottom_toTopOf="@+id/recycleViewYemekSepeti"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yemek_sepet_title"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            app:layout_constraintHorizontal_bias="0.238"
+            />
+        </androidx.appcompat.widget.Toolbar>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

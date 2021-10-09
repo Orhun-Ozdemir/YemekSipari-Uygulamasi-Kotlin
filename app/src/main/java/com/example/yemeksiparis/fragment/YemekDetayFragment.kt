@@ -87,4 +87,12 @@ class YemekDetayFragment : Fragment() {
 
     }
 
+    fun sepetGecis(){
+
+        val direction=YemekDetayFragmentDirections.actionYemekDetayFragmentToYemekSepetiFragment()
+        Navigation.findNavController(tasarim.root).navigate(direction)
+
+
+    }
+
 }

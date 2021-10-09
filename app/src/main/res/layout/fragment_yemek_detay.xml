@@ -53,7 +53,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Yemek Detay" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/main_color"
+                android:layout_marginEnd="20dp"
+                android:onClick="@{()->yemekDetayFragment.sepetGecis()}"
+                android:layout_gravity="end"
+                app:srcCompat="@drawable/sepet" />
+
+
         </androidx.appcompat.widget.Toolbar>
+
 
 
 
