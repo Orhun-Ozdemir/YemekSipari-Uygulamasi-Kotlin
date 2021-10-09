@@ -17,4 +17,8 @@
     <string name="hayır">No</string>
     <string name="fiyat">Price</string>
     <string name="adet">Count</string>
+    <string name="tum_yemekler">All Foods</string>
+    <string name="yemek_arama">Search Foods</string>
+    <string name="urun_sepete_eklendi">Food Added to Cart</string>
+    <string name="baslamak">Get Started</string>
 </resources>

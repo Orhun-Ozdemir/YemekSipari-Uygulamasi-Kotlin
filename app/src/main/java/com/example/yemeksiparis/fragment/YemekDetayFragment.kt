@@ -69,7 +69,7 @@ class YemekDetayFragment : Fragment() {
     {
 
         viewModel.yemekEkle(args.yemekNesnesi)
-        Toast.makeText(requireContext()," Ürün Sepete Eklendi",Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(),R.string.urun_sepete_eklendi,Toast.LENGTH_SHORT).show()
 
     }
 

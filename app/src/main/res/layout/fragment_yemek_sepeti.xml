@@ -93,6 +93,8 @@
             android:layout_marginTop="50dp"
             android:layout_marginEnd="30dp"
             android:text="@{sepetFiyat}"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/recycleViewYemekSepeti" />
 
@@ -117,6 +119,8 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="30dp"
             android:text="20 TL"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewSepetFiyat" />
 
@@ -124,9 +128,12 @@
             android:id="@+id/textViewToplamFiyat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="28dp"
             android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewKuriyeFiyat" />
 
